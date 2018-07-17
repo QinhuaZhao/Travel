@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 // reset.css 重置页面样式表,统一不同设备的浏览器初始化样式  styles是一个别名
 import 'styles/reset.css'
 //  解决一像素边框问题, 1px指一个css像素,但实际可能显示成多个物理像素, 在多倍屏里面亿像素边框被显示成多像素问题, 1px像素边框解决方案  styles是一个别名
@@ -12,9 +13,15 @@ import fastClick from 'fastclick'
 //  引入iconfont  styles是一个别名
 import 'styles/iconfont.css'
 
+// 轮播插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+
 Vue.config.productionTip = false
 //  使用fastClick
 fastClick.attach(document.body)
+
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
@@ -33,6 +40,9 @@ new Vue({
 
 //  该项目是移动端项目
 
-//  支持变量的css
+//  支持变量的css stylus TODO
 //  npm install stylus --save
 //  npm install stylus-loader --save
+
+//  轮播插件vue-awesome-swiper @后跟版本号
+//  npm install vue-awesome-swiper@2.6.7 --save
