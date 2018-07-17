@@ -3,13 +3,17 @@
     <!--<div class="home">Hello World</div>-->
     <!--Vue一般不用a标签, 用router-link标签 to指向路由配置的地址-->
     <!--<router-link class="home" to="/list">list</router-link>-->
-    hello world
+    <home-header></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from './components/Header'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader: HomeHeader
+  }
 }
 </script>
 
