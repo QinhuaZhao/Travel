@@ -46,3 +46,6 @@ new Vue({
 
 //  轮播插件vue-awesome-swiper @后跟版本号
 //  npm install vue-awesome-swiper@2.6.7 --save
+
+//  ajax: 浏览器自带的fetch; vue以前推荐的vue-resource; 现在推荐axios第三方模块可以实现跨平台的数据请求,浏览器xhr的请求,node服务器http请求
+// npm install axios --save

@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,14 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data: function () {
-    return {
-      recommendList: [
-        {id: '0001', title: '金海湖风景区', imgUrl: 'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg', desc: '金海湖风景区好啊'},
-        {id: '0002', title: '金海湖风景区', imgUrl: 'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg', desc: '金海湖风景区好啊'},
-        {id: '0003', title: '金海湖风景区', imgUrl: 'http://img1.qunarzz.com/sight/p0/1609/7a/7ae8ee7831836095a3.water.jpg_200x200_36727f69.jpg', desc: '金海湖风景区好啊'}
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
