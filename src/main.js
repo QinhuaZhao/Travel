@@ -49,3 +49,6 @@ new Vue({
 
 //  ajax: 浏览器自带的fetch; vue以前推荐的vue-resource; 现在推荐axios第三方模块可以实现跨平台的数据请求,浏览器xhr的请求,node服务器http请求
 // npm install axios --save
+
+//  第三方滚动条
+//  npm install better-scroll --save
