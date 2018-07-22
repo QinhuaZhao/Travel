@@ -17,6 +17,8 @@ import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
+import store from './store'
+
 Vue.config.productionTip = false
 //  使用fastClick
 fastClick.attach(document.body)
@@ -28,6 +30,7 @@ new Vue({
   el: '#app',
   // router: router的简写, 导入是为了给子组件使用 <!--<router-view></router-view>-->
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
@@ -52,3 +55,6 @@ new Vue({
 
 //  第三方滚动条
 //  npm install better-scroll --save
+
+//  vuex vue数据共享
+//  npm install vuex --save

@@ -9,6 +9,10 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
+        <!--使用vuex的mapState-->
+        <!--{{this.$store.state.city}}-->
+        <!--使用vuex的gettet-->
+        <!--{{this.doubleCity}}-->
         {{this.city}}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
@@ -17,10 +21,15 @@
 </template>
 
 <script>
+//  引入vuex的mapState
+import {mapState, mapGetters} from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    //  展开运算符  将city映射到computed下的city  TODO
+    ...mapState(['city']),
+    //  使用vuex的getter   getter的作用当变量需要计算时类似于vue里面的computed
+    ...mapGetters(['doubleCity'])
   }
 }
 </script>
@@ -59,7 +68,8 @@ export default {
       margin-left .2rem
       color #ccc
     .header-right
-      width 1.24rem
+      min-width 1.04rem
+      padding 0.1rem
       float right
       text-align center
       color white
