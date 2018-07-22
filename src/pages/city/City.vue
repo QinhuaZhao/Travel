@@ -32,6 +32,7 @@ export default {
     getCityInfo: function () {
       axios.get('/api/city.json')
         .then(this.handleGetCityInfoSuccess)
+      //  此处方法没有写() TODO
     },
     handleGetCityInfoSuccess: function (res) {
       res = res.data
